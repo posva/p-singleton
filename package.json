@@ -27,5 +27,9 @@
   "bugs": {
     "url": "https://github.com/posva/p-singleton/issues"
   },
-  "homepage": "https://github.com/posva/p-singleton#readme"
+  "homepage": "https://github.com/posva/p-singleton#readme",
+  "devDependencies": {
+    "expect": "^24.1.0",
+    "mocha": "^6.0.2"
+  }
 }
