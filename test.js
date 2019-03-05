@@ -68,7 +68,7 @@ describe('p-singleton', () => {
     expect(p(2)).not.toBe(p(3))
   })
 
-  it('returns a new promise if resolves', async () => {
+  it('returns a new promise if rejected', async () => {
     let resolve
     const p = pSingleton(() => {
       const fake = fakePromise()
@@ -78,6 +78,24 @@ describe('p-singleton', () => {
     const p1 = p()
     resolve()
     await tick()
+    const p2 = p()
+
+    expect(p1).not.toBe(p2)
+  })
+
+  it('returns a new promise if rejected', async () => {
+    let reject
+    const p = pSingleton(() => {
+      const fake = fakePromise()
+      reject = fake[2]
+      return fake[0]
+    })
+    const spy = jest.fn()
+    const p1 = p().catch(spy)
+    expect(spy).not.toHaveBeenCalled()
+    reject()
+    await tick()
+    expect(spy).toHaveBeenCalled()
     const p2 = p()
 
     expect(p1).not.toBe(p2)
