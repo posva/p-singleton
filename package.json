@@ -1,0 +1,31 @@
+{
+  "name": "p-singleton",
+  "version": "0.0.1",
+  "main": "index.js",
+  "description": "Ensure only one version of the same promise is running",
+  "author": {
+    "name": "Eduardo San Martin Morote",
+    "email": "posva13@gmail.com"
+  },
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "keywords": [
+    "promise",
+    "promises",
+    "singleton",
+    "unique",
+    "single",
+    "concurrent"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/posva/p-singleton.git"
+  },
+  "bugs": {
+    "url": "https://github.com/posva/p-singleton/issues"
+  },
+  "homepage": "https://github.com/posva/p-singleton#readme"
+}
