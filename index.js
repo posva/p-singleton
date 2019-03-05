@@ -11,11 +11,7 @@ module.exports = function pSingleton(fn, serialize = JSON.stringify) {
   const runningPromises = new Map()
   return (...args) => {
     const serializedArgs = serialize(args)
-    console.log(
-      'checking for serialized args',
-      serializedArgs,
-      runningPromises.has(serializedArgs)
-    )
+
     if (runningPromises.has(serializedArgs)) {
       return runningPromises.get(serializedArgs)
     }

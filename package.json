@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/posva/p-singleton#readme",
   "devDependencies": {
-    "expect": "^24.1.0",
-    "mocha": "^6.0.2"
+    "faked-promise": "^2.0.0",
+    "jest": "^24.1.0"
   }
 }
