@@ -1,6 +1,6 @@
 {
   "name": "p-singleton",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "description": "Ensure only one version of the same promise is running",
   "author": {
