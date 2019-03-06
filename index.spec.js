@@ -99,4 +99,21 @@ describe('p-singleton', () => {
 
     expect(p1).not.toBe(p2)
   })
+
+  it('supports a custom serializer', () => {
+    class A {
+      constructor (a) {
+        this.a = a
+      }
+      // override the JSON method on purpose
+      toJSON () {
+        return 'a'
+      }
+    }
+
+    const pNoSerializer = pSingleton(() => new Promise(() => {}))
+    expect(pNoSerializer(new A('a'))).toBe(pNoSerializer(new A('b')))
+    const p = pSingleton(() => new Promise(() => {}), ([a]) => a.a)
+    expect(p(new A('a'))).not.toBe(p(new A('b')))
+  })
 })
