@@ -1,7 +1,7 @@
 const fakePromise = require('faked-promise')
 const pSingleton = require('./index')
 
-const tick = () => new Promise(r => setImmediate(r))
+const tick = () => new Promise(resolve => setImmediate(resolve))
 
 describe('p-singleton', () => {
   it('returns a promise', () => {
@@ -29,7 +29,7 @@ describe('p-singleton', () => {
   })
 
   it('rejects the promise', async () => {
-    const [promise, resolve, reject] = fakePromise()
+    const [promise, , reject] = fakePromise()
     const p = pSingleton(() => promise)
     const spy = jest.fn()
     p().catch(spy)
@@ -54,8 +54,7 @@ describe('p-singleton', () => {
   })
 
   it('consecutive calls return the same promise', () => {
-    const [promise, resolve] = fakePromise()
-    const p = pSingleton(() => promise)
+    const p = pSingleton(() => new Promise(() => {}))
     expect(p()).toBe(p())
   })
 

@@ -7,7 +7,7 @@
  *
  * @return {(...args: any[]) => Promise<any>}
  */
-module.exports = function pSingleton(fn, serialize = JSON.stringify) {
+module.exports = function pSingleton (fn, serialize = JSON.stringify) {
   const runningPromises = new Map()
   return (...args) => {
     const serializedArgs = serialize(args)

@@ -8,6 +8,9 @@
     "email": "posva13@gmail.com"
   },
   "scripts": {
+    "lint": "eslint --fix --color *.js",
+    "pretest": "yarn lint",
+    "dev": "jest --watchAll",
     "test": "jest --collectCoverage"
   },
   "files": [
@@ -32,6 +35,9 @@
   },
   "homepage": "https://github.com/posva/p-singleton#readme",
   "devDependencies": {
+    "codecov": "^3.2.0",
+    "eslint": "^5.15.1",
+    "eslint-config-posva": "^2.0.3",
     "faked-promise": "^2.0.0",
     "jest": "^24.1.0"
   }
