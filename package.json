@@ -39,6 +39,12 @@
     "eslint": "^5.15.1",
     "eslint-config-posva": "^2.0.3",
     "faked-promise": "^2.0.0",
-    "jest": "^24.1.0"
+    "jest": "^24.1.0",
+    "typescript": "^3.3.3333"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/*.spec.js"
+    ]
   }
 }
