@@ -54,6 +54,8 @@ returns a function that returns a Promise
 
 ## Related
 
+- [p-fun](https://github.com/sindresorhus/promise-fun)
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
