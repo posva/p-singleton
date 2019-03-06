@@ -116,4 +116,15 @@ describe('p-singleton', () => {
     const p = pSingleton(() => new Promise(() => {}), ([a]) => a.a)
     expect(p(new A('a'))).not.toBe(p(new A('b')))
   })
+
+  it('calls with the context', async () => {
+    const obj = {
+      name: 'foo',
+      p: pSingleton(function () {
+        return Promise.resolve(this.name)
+      }),
+    }
+
+    expect(await obj.p()).toBe('foo')
+  })
 })
