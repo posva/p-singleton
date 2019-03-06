@@ -11,10 +11,14 @@
     "lint": "eslint --fix --color *.js",
     "pretest": "yarn lint",
     "dev": "jest --watchAll",
-    "test": "jest --collectCoverage"
+    "test:types": "tsc --build types/tsconfig.json",
+    "test:unit": "jest --collectCoverage",
+    "test": "yarn test:types && yarn test:unit"
   },
+  "types": "types/index.d.ts",
   "files": [
     "index.js",
+    "types/index.d.ts",
     "LICENSE"
   ],
   "keywords": [
