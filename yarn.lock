@@ -1400,9 +1400,9 @@ extsprintf@^1.2.0:
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
 faked-promise@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/faked-promise/-/faked-promise-2.0.0.tgz#57f929e4363deee7debb4d3242d4ab0c607cdfaa"
-  integrity sha512-W/sZxsVOoOENv+rgX1hUNGoXOka+yLGOIECELCU42PSNfS2aO5Loc2Y/FdfwoqisS8nI9cr8IeBmoOt6O8Cqlw==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/faked-promise/-/faked-promise-2.1.0.tgz#988dd6f7e1c30638be2cd0d67e944b51d5dbbaeb"
+  integrity sha512-p5QCxMj8OsHjBs0aIEbg1WFW019Tib3LIWpz6Fyl5uVf4A3FRJzcMrJgiTgwVB5k99k3M566U6NUa/rEi473fA==
 
 fast-deep-equal@^2.0.1:
   version "2.0.1"
@@ -2442,14 +2442,6 @@ jest@^24.1.0:
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
 js-yaml@^3.12.0, js-yaml@^3.13.0:
-  version "3.13.1"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
-  integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^4.0.0"
-
-js-yaml@^3.13.0:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
