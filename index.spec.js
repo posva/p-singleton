@@ -105,6 +105,7 @@ describe('p-singleton', () => {
       constructor (a) {
         this.a = a
       }
+
       // override the JSON method on purpose
       toJSON () {
         return 'a'
