@@ -8,7 +8,7 @@ module.exports = function pSingleton (fn, serialize = JSON.stringify) {
       return runningPromises.get(serializedArgs)
     }
 
-    const promise = fn.call(this, args).finally(() => {
+    const promise = fn.apply(this, args).finally(() => {
       runningPromises.delete(serializedArgs)
     })
 
