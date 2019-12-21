@@ -114,7 +114,10 @@ describe('p-singleton', () => {
 
     const pNoSerializer = pSingleton(() => new Promise(() => {}))
     expect(pNoSerializer(new A('a'))).toBe(pNoSerializer(new A('b')))
-    const p = pSingleton(() => new Promise(() => {}), ([a]) => a.a)
+    const p = pSingleton(
+      () => new Promise(() => {}),
+      ([a]) => a.a,
+    )
     expect(p(new A('a'))).not.toBe(p(new A('b')))
   })
 
@@ -127,5 +130,13 @@ describe('p-singleton', () => {
     }
 
     expect(await obj.p()).toBe('foo')
+  })
+
+  it('can be called with multiple arguments', async () => {
+    const p = pSingleton(function (a, b, c) {
+      return Promise.resolve(a + b + c)
+    })
+
+    expect(await p(1, 2, 3)).toBe(6)
   })
 })
