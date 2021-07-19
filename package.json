@@ -40,7 +40,7 @@
   "homepage": "https://github.com/posva/p-singleton#readme",
   "devDependencies": {
     "codecov": "^3.8.2",
-    "eslint": "^7.30.0",
+    "eslint": "^7.31.0",
     "eslint-config-posva": "^3.0.3",
     "faked-promise": "^2.2.2",
     "jest": "^27.0.6",
