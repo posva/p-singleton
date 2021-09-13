@@ -43,8 +43,8 @@
     "eslint": "^7.32.0",
     "eslint-config-posva": "^3.0.3",
     "faked-promise": "^2.2.2",
-    "jest": "^27.1.0",
-    "typescript": "^4.4.2"
+    "jest": "^27.1.1",
+    "typescript": "^4.4.3"
   },
   "jest": {
     "testMatch": [
